@@ -105,11 +105,24 @@ with tab2:
         marriage_view = st.text_area("結婚観", height=120)
 
     st.subheader("カウンセラーメモ（紹介文用）")
-    counselor_memo = st.text_area(
-        "エピソード・人柄・印象など（自己PRに入れない内容を書く）",
-        height=160,
-        placeholder='例：「将来は家庭菜園がしたい」とおっしゃっていた。笑顔が多く、初対面でもとても話しやすい雰囲気。聞き上手で相手を気遣う言葉が自然に出てくる方。',
-    )
+    memo_first_impression = st.text_area("第一印象", height=100, placeholder="例：笑顔が素敵で、初対面でもとても話しやすい雰囲気")
+    memo_personality = st.text_area("人柄", height=100, placeholder="例：聞き上手で相手を気遣う言葉が自然に出てくる方")
+    memo_selling_point = st.text_area("セールスポイント", height=100, placeholder="例：仕事への責任感が強く、家庭的な一面もある")
+    memo_weakness = st.text_area("ちょっとした短所", height=100, placeholder="例：少し緊張しやすいが、慣れると明るくなる")
+    memo_conditions = st.text_area("条件・環境メリット", height=100, placeholder="例：転勤なし・持ち家あり・ご両親も近居で協力的")
+
+    counselor_memo_parts = []
+    if memo_first_impression:
+        counselor_memo_parts.append(f"＜第一印象＞\n{memo_first_impression}")
+    if memo_personality:
+        counselor_memo_parts.append(f"＜人柄＞\n{memo_personality}")
+    if memo_selling_point:
+        counselor_memo_parts.append(f"＜セールスポイント＞\n{memo_selling_point}")
+    if memo_weakness:
+        counselor_memo_parts.append(f"＜ちょっとした短所＞\n{memo_weakness}")
+    if memo_conditions:
+        counselor_memo_parts.append(f"＜条件・環境メリット＞\n{memo_conditions}")
+    counselor_memo = "\n\n".join(counselor_memo_parts)
 
     st.divider()
 
