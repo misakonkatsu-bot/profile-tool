@@ -28,7 +28,6 @@ def generate_profile(member_info: dict, api_key: str) -> str:
 """
 
     prompt = f"""{pattern_section}【会員様の基本情報】
-名前（ニックネーム）: {member_info.get('name', '')}
 年齢: {member_info.get('age', '')}歳
 性別: {member_info.get('gender', '')}
 職業: {member_info.get('occupation', '')}

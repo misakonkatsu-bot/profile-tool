@@ -131,7 +131,8 @@ with tab2:
         with st.spinner("プロフィールを生成中です...（30秒〜1分ほどかかります）"):
             try:
                 result = generate_profile(member_info, api_key)
-                st.session_state["generated"] = result
+                title_line = f"【{name}様　プロフィール】\n\n"
+                st.session_state["generated"] = title_line + result
                 st.session_state["doc_title"] = f"{name} プロフィール"
             except Exception as e:
                 st.error(f"エラーが発生しました: {e}")
