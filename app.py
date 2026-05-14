@@ -150,8 +150,15 @@ with tab2:
             key="profile_output",
         )
 
-        col_btn1, col_btn2 = st.columns([1, 3])
+        col_btn1, col_btn2, col_btn3 = st.columns([1, 1, 2])
         with col_btn1:
+            st.download_button(
+                label="📥 テキストで保存",
+                data=st.session_state["generated"],
+                file_name=f"{st.session_state['doc_title']}.txt",
+                mime="text/plain",
+            )
+        with col_btn2:
             if is_configured():
                 if st.button("📄 Googleドキュメントに保存", type="secondary"):
                     with st.spinner("Googleドキュメントに保存中..."):
