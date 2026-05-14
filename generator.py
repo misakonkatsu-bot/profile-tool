@@ -102,6 +102,8 @@ def generate_profile(member_info: dict, api_key: str) -> str:
 - 自己PRとカウンセラー紹介文の内容が重複しないこと
 - カウンセリングメモにない情報は絶対に追加しないこと
 - 自然で読みやすい日本語にすること
+- 「（笑）」は使用しないこと
+- カウンセラー紹介文では会員様本人のことを「彼」または「彼女」と表現すること（名前は使わないこと）
 """
 
     response = client.messages.create(

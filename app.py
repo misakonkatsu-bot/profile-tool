@@ -95,19 +95,19 @@ with tab2:
         st.subheader("カウンセリングメモ（自己PR用）")
         reason = st.text_area(
             "婚活を始めたきっかけ",
-            height=90,
+            height=120,
             placeholder="カウンセリング中にメモしながら入力してください",
         )
-        personality = st.text_area("性格・価値観", height=90)
-        work = st.text_area("仕事について", height=90)
-        hobbies = st.text_area("休日の過ごし方・趣味", height=90)
-        lifestyle = st.text_area("ライフスタイル", height=90)
-        marriage_view = st.text_area("結婚観", height=90)
+        personality = st.text_area("性格・価値観", height=120)
+        work = st.text_area("仕事について", height=120)
+        hobbies = st.text_area("休日の過ごし方・趣味", height=120)
+        lifestyle = st.text_area("ライフスタイル", height=120)
+        marriage_view = st.text_area("結婚観", height=120)
 
     st.subheader("カウンセラーメモ（紹介文用）")
     counselor_memo = st.text_area(
         "エピソード・人柄・印象など（自己PRに入れない内容を書く）",
-        height=130,
+        height=160,
         placeholder='例：「将来は家庭菜園がしたい」とおっしゃっていた。笑顔が多く、初対面でもとても話しやすい雰囲気。聞き上手で相手を気遣う言葉が自然に出てくる方。',
     )
 
